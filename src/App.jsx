@@ -1,8 +1,8 @@
 import './App.css'
 import { BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ForgotPass from './pages/ForgotPass';
+import Login from './components/Login';
+import Register from './components/Register';
+import ForgotPass from './components/ForgotPass';
 import Dashboard from './pages/Dashboard';
 function App() {
   const isAuthenticated = localStorage.getItem('token');
