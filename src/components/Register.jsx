@@ -17,7 +17,7 @@ function Register() {
         console.table(formData)
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5500/auth/register', formData);
+            await axios.post('https://taskbackend-4gzx.onrender.com/auth/register', formData);
             navigate('/login');
         } catch (err) {
             setError(err.response?.data?.error || 'Registration failed');

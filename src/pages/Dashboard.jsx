@@ -41,7 +41,7 @@ const Dashboard = () => {
     const getTasks = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:5500/tasks", {
+            const res = await axios.get("https://taskbackend-4gzx.onrender.com/tasks", {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setTasks(res.data.tasks);
@@ -54,7 +54,7 @@ const Dashboard = () => {
     const getTeams = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:5500/teams", {
+            const res = await axios.get("https://taskbackend-4gzx.onrender.com/teams", {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setTeams(res.data.teams);
@@ -67,7 +67,7 @@ const Dashboard = () => {
     const getUsers = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:5500/users", {
+            const res = await axios.get("https://taskbackend-4gzx.onrender.com/users", {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setUsers(res.data.users);
@@ -88,7 +88,7 @@ const Dashboard = () => {
             const token = localStorage.getItem("token");
 
             await axios.post(
-                "http://localhost:5500/tasks",
+                "https://taskbackend-4gzx.onrender.com/tasks",
                 newTask,
                 { headers: { Authorization: `Bearer ${token}` } }
             );
